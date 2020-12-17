@@ -1,10 +1,16 @@
 {
   "name": "tomato-time",
 	"displayName": "tomato-time",
-	"description": "",
+	"description": "简单的番茄计时器，划分专注时间与休息时间",
+	"publisher": "woodii",
 	"version": "0.0.1",
+	"license": "MIT",
 	"engines": {
 		"vscode": "^1.52.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1322756558/tomato-time"
 	},
 	"categories": [
 		"Other"
