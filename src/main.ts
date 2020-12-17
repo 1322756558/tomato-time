@@ -2,7 +2,7 @@
  * @Autor: junhui li
  * @Date: 2020-12-16 10:15:17
  * @LastEditors: junhui li
- * @LastEditTime: 2020-12-17 16:37:50
+ * @LastEditTime: 2020-12-17 17:56:51
  * @Description: 主文件
  */
 import * as vscode from 'vscode';
@@ -30,7 +30,7 @@ export default function main(selectTime: string | undefined){
 
 function timing(time: number, num: number, work:boolean=true){
   let remainingTime = time - num;
-  vscode.window.setStatusBarMessage('剩余'+remainingTime+1+'分钟');
+  vscode.window.setStatusBarMessage('番茄时钟：剩余'+(remainingTime+1)+'分钟');
   setTimeout(()=>{
     if(remainingTime !== 0){
       timing(time, num+1);
