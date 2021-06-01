@@ -2,7 +2,7 @@
  * @Autor: junhui li
  * @Date: 2020-12-16 10:15:17
  * @LastEditors: junhui li
- * @LastEditTime: 2020-12-17 17:56:51
+ * @LastEditTime: 2021-06-01 10:18:19
  * @Description: 主文件
  */
 import * as vscode from 'vscode';
@@ -29,11 +29,12 @@ export default function main(selectTime: string | undefined){
 }
 
 function timing(time: number, num: number, work:boolean=true){
+  console.log('get work value', work);
   let remainingTime = time - num;
   vscode.window.setStatusBarMessage('番茄时钟：剩余'+(remainingTime+1)+'分钟');
   setTimeout(()=>{
     if(remainingTime !== 0){
-      timing(time, num+1);
+      timing(time, num+1, work);
     }else{
       if(work){
         vscode.window.showInformationMessage('专注结束，休息一下吧');
@@ -42,12 +43,12 @@ function timing(time: number, num: number, work:boolean=true){
             main(selectTime);
           });
       }else{
-        vscode.window.showInformationMessage('休息结束');
+        vscode.window.showInformationMessage('休息结束'); 
         vscode.window.showInformationMessage('是否继续开始专注？','20分钟','25分钟','30分钟', '取消')
           .then((selectTime)=>{
             main(selectTime);
           });
       }
     }
-  }, 60*1000);
+  }, 10*100);
 }
