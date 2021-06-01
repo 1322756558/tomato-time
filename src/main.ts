@@ -2,7 +2,7 @@
  * @Autor: junhui li
  * @Date: 2020-12-16 10:15:17
  * @LastEditors: junhui li
- * @LastEditTime: 2021-06-01 10:18:19
+ * @LastEditTime: 2021-06-01 10:27:57
  * @Description: 主文件
  */
 import * as vscode from 'vscode';
@@ -50,5 +50,5 @@ function timing(time: number, num: number, work:boolean=true){
           });
       }
     }
-  }, 10*100);
+  }, 60*1000);
 }
