@@ -2,8 +2,9 @@
   "name": "tomato-time",
 	"displayName": "tomato-time",
 	"description": "简单的番茄计时器，划分专注时间与休息时间",
-	"publisher": "woodii",
-	"version": "0.0.1",
+	"publisher": "Woodii",
+	"icon": "images/icon.png",
+	"version": "0.0.2",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.52.0"
